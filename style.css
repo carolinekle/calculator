@@ -9,9 +9,10 @@ body{
 }
 
 #calculator{
-    height:800px;
-    width: 300px;
+    height:450px;
+    width: 250px;
     display: flex;
+    flex-direction: column;
     background-color: rgb(184, 184, 150);
     margin:auto;
     padding:2%;
@@ -19,35 +20,37 @@ body{
 
 .screen{
     background-color: rgb(43, 31, 31);
-    width: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    margin:auto;
+    width: 230px;
     height:7rem;
     color:rgb(119, 4, 4);
+    padding:5px;
 }
 
-.background{
-    background-color:  rgb(43, 31, 31);
-}
 
-.buttons, .numbers{
-    background-color: white;
-    height: 20px;
-    width: 20px;
+#keys {
+    background-color:rgb(43, 31, 31);
+    height: 400px;
+    width: 230px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-self: center;
     flex-direction: row;
     margin:auto;
+    padding:5px;
 }
 
-.operations{
-    background-color: white;
-    height: 20px;
-    width: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-self: center;
-    flex-direction: row;
-    margin:auto;
+button{
+    height:50px;
+    width:50px;
 }
+
+.big{
+    width:100px;
+}
+
