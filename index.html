@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <title>Caculator</title>
 </head>
 <body>
     <div id = "calculator">
 
 
             <div class="screen">
-                <div class="previous">12</div>
-                <div class = "current">234</div>
+                <div data-previous class = "previous"></div>
+                <div data-current class = "current"></div>
             </div>
          
             <div id= "keys">
-                <button class="beige">C</button>
-                <button class="beige">CE</button>
-                <button class="beige">%</button>
-                <button class="beige">÷</button>
-                <button >7</button>
-                <button >8</button>
-                <button >9</button>
-                <button class="beige">x</button>
-                <button >4</button>
-                <button >5</button>
-                <button >6</button>
-                <button class="beige">-</button>
-                <button >1</button>
-                <button >2</button>
-                <button >3</button>
-                <button class="beige">+</button>
-                <button >0</button>
-                <button >.</button>
-                <button class = "big">=</button>
+                <button data-delete class="beige">C</button>
+                <button data-erase class="beige">CE</button>
+                <button data-number class="beige">%</button>
+                <button data-operator class="beige">÷</button>
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button data-operator class="beige">x</button>
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button data-operator class="beige">-</button>
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button data-operator class="beige">+</button>
+                <button data-number>0</button>
+                <button data-number>.</button>
+                <button data-equals class = "big">=</button>
 
     
             </div>
