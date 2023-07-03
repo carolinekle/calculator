@@ -38,9 +38,20 @@ operationSelect(operation){
 }
 
 compute(){
+
     let answer
     let p = parseFloat(this.previous)
     let c = parseFloat(this.current)
+    
+    if(this.previous.includes("%")){
+        this.previous = this.previous.toString().slice(0, -1);
+        let percent = parseFloat(this.previous)
+        percent = percent / 100
+        let percentResult = percent * c
+        this.previous = ""
+        return this.current = percentResult.toString()
+    }
+
     if(isNaN(c) && isNaN(p))return 
         switch(this.operation){
             case "x":
