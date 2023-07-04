@@ -27,13 +27,13 @@ body{
     font-family: 'VT323', monospace;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: end;
     margin:auto;
-    width: 240px;
-    height:5rem;
+    width: 255px;
+    height:5.5rem;
     color:rgba(167,22,32,255);
-    padding:1rem;
+    padding:.5rem;
     border-radius: 5px;
 }
 

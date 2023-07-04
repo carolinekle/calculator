@@ -7,6 +7,7 @@ const operations = document.querySelectorAll("[data-operator]");
 const equal = document.querySelector("[data-equals]");
 
 
+
 class calculator{
     constructor(previousText, currentText){
         this.previousText = previousText;
@@ -25,10 +26,12 @@ deleteLast(){
 }
 
 appendNumber(number){
-    if(this.current.includes(".")) return
+    if (number === "." && this.current.includes(".")) {
+        return;
+    }
     this.current = this.current + number;
-    
 }
+
 
 operationSelect(operation){
     this.operation = operation
@@ -71,13 +74,19 @@ compute(){
         }
         this.previous = ""
         this.operation = undefined
-        this.current = answer.toString()
+        this.current = answer.toLocaleString('en-US')
     }
+
+formatNumber(number) {
+    const parts = number.toString().split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return parts.join('.');
+}
 
 
 display(){
-    this.currentText.innerText = this.current;
-    this.previousText.innerText = this.previous;
+    this.currentText.innerText = this.formatNumber(this.current);
+    this.previousText.innerText = this.formatNumber(this.previous);
 }
 
 }
